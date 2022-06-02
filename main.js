@@ -52,7 +52,9 @@ async function loadWind(url) {
     //console.log("Echtes Datum Vorhersage" forecastDate);
 
     let forecastLabel = formatDate(forecastDate);
-    console.log("Vorhersagezeitpunk", formatDate(forecastDate));
+    //console.log("Vorhersagezeitpunk", formatDate(forecastDate));
+
+    layerControl.addOverlay(overlays.wind, `ECMWF Windvorhersage für ${forecastLabel}`)
 };
 loadWind("https://geographie.uibk.ac.at/webmapping/ecmwf/data/wind-10u-10v-europe.json");
 
